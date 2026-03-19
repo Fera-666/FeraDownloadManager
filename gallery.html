@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Fera Download Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .lightbox-close:hover {
+            color: #e74c3c;
+        }
+        
+        .lightbox-prev, .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 50px;
+            cursor: pointer;
+            padding: 20px;
+            transition: background 0.3s;
+        }
+        
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        
+        .lightbox-prev:hover, .lightbox-next:hover {
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+        }
+        
+        .gallery-category {
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📸 Gallery</h1>
+            <p>Screenshots of Fera Download Manager in action</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <button class="mobile-menu-btn">☰</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="changelog.html">Changelog</a></li>
+                <li><a href="license.html">License</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <!-- Category: Main Interface -->
+        <h2 class="gallery-category">📱 Main Interface</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="images/screenshots/main-window.png" alt="Main Window">
+                <div class="caption">Main download window with active downloads</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="images/screenshots/add-dialog.png" alt="Add Dialog">
+                <div class="caption">Add download dialog with options</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="images/screenshots/dark-light.gif" alt="Dark/Light Themes">
+                <div class="caption">Dark and Light themes side by side</div>
+            </div>
+        </div>
+        
+        <!-- Category: Browser -->
+        <h2 class="gallery-category">🌐 Web Browser</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="images/screenshots/browser.png" alt="Browser">
+                <div class="caption">Built-in web browser with tabs</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="images/screenshots/bookmarks.png" alt="Bookmarks">
+                <div class="caption">Bookmark manager with folders</div>
+            </div>
+        </div>
+        
+        <!-- Category: Torrent -->
+        <h2 class="gallery-category">🧲 Torrent Downloader</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="images/screenshots/torrent.png" alt="Torrent">
+                <div class="caption">Torrent download manager</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="images/screenshots/torrent-add.png" alt="Add Torrent">
+                <div class="caption">Add torrent with file selection</div>
+            </div>
+        </div>
+        
+        <!-- Category: YouTube -->
+        <h2 class="gallery-category">🎬 YouTube Downloader</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="images/screenshots/youtube.png" alt="YouTube">
+                <div class="caption">YouTube downloader with video info</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="images/screenshots/playlist.png" alt="Playlist">
+                <div class="caption">Playlist download mode</div>
+            </div>
+        </div>
+        
+        <!-- Category: Scheduler -->
+        <h2 class="gallery-category">📅 Smart Scheduler</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(9)">
+                <img src="images/screenshots/scheduler.png" alt="Scheduler">
+                <div class="caption">Schedule management window</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="images/screenshots/scheduler-add.png" alt="Add Task">
+                <div class="caption">Add scheduled task dialog</div>
+            </div>
+        </div>
+        
+        <!-- Category: Settings -->
+        <h2 class="gallery-category">⚙️ Settings</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="images/screenshots/settings.gif" alt="Settings">
+                <div class="caption">Settings window with tabs</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(12)">
+                <img src="images/screenshots/license.png" alt="License">
+                <div class="caption">License activation dialog</div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-prev" onclick="prevImage(event)">&#10094;</span>
+        <span class="lightbox-next" onclick="nextImage(event)">&#10095;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Fera Download Manager</h4>
+                    <p>The all-in-one download solution for Windows. Created with ❤️ by Fera.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                        <li><a href="license.html">License</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="support.html">Contact</a></li>
+                        <li><a href="https://github.com/Fera-666/FeraUpdates/issues" target="_blank">GitHub Issues</a></li>
+                        <li><a href="mailto:fera2007@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="https://github.com/Fera-666" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Fera. All rights reserved. | Version <span class="latest-version">1.0.0</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Lightbox functionality
+        const images = [
+            'images/screenshots/main-window.png',
+            'images/screenshots/add-dialog.png',
+            'images/screenshots/dark-light.gif',
+            'images/screenshots/browser.png',
+            'images/screenshots/bookmarks.png',
+            'images/screenshots/torrent.png',
+            'images/screenshots/torrent-add.png',
+            'images/screenshots/youtube.png',
+            'images/screenshots/playlist.png',
+            'images/screenshots/scheduler.png',
+            'images/screenshots/scheduler-add.png',
+            'images/screenshots/settings.gif',
+            'images/screenshots/license.png'
+        ];
+        
+        let currentImageIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        function openLightbox(index) {
+            currentImageIndex = index;
+            lightboxImg.src = images[currentImageIndex];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function nextImage(event) {
+            event.stopPropagation();
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            lightboxImg.src = images[currentImageIndex];
+        }
+        
+        function prevImage(event) {
+            event.stopPropagation();
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            lightboxImg.src = images[currentImageIndex];
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                nextImage(e);
+            } else if (e.key === 'ArrowLeft') {
+                prevImage(e);
+            }
+        });
+    </script>
+</body>
+</html>
