@@ -5,13 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>License - Fera Download Manager</title>
     <link rel="stylesheet" href="css/style.css">
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .special-offer {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+        }
+        .special-offer h3 {
+            color: #856404;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .special-offer p {
+            color: #856404;
+            font-size: 1.2rem;
+        }
+        .offer-badge {
+            background: #ffc107;
+            color: #856404;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .comparison-note {
+            background: #f0f9ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
+            <img src="images/logo.png" alt="Fera Logo" style="width: 80px; height: 80px; margin-bottom: 1rem;">
             <h1>🔒 License Options</h1>
-            <p>Choose the license that fits your needs</p>
+            <p>Choose the plan that fits your needs</p>
         </div>
     </header>
     
@@ -34,70 +72,153 @@
         <!-- Free Trial Info -->
         <div style="text-align: center; margin-bottom: 3rem; background: #f0f9ff; padding: 2rem; border-radius: 8px;">
             <h2>🎁 7-Day Free Trial</h2>
-            <p>Try all features free for 7 days. No credit card required.</p>
+            <p>Try all features completely free for 7 days. No credit card required.</p>
             <a href="download.html" class="download-btn" style="margin-top: 1rem;">Download Free Trial</a>
         </div>
-        
-        <!-- License Cards -->
-        <div class="license-types">
-            <!-- Standard License -->
-            <div class="license-card">
-                <h3>📘 Standard</h3>
-                <div class="license-price">$19.99 <span>/ lifetime</span></div>
-                <ul class="license-features">
-                    <li>✓ All core features</li>
-                    <li>✓ Download manager</li>
-                    <li>✓ YouTube downloader</li>
-                    <li>✓ Basic scheduler</li>
-                    <li>✓ Email support</li>
-                    <li class="disabled">✗ Built-in browser</li>
-                    <li class="disabled">✗ Torrent downloader</li>
-                    <li class="disabled">✗ Advanced scheduler</li>
-                </ul>
-                <a href="#" class="btn btn-primary" style="width: 100%;">Buy Now</a>
-            </div>
-            
-            <!-- Premium License (Popular) -->
-            <div class="license-card popular">
-                <div class="popular-badge">POPULAR</div>
-                <h3>⭐ Premium</h3>
-                <div class="license-price">$39.99 <span>/ lifetime</span></div>
-                <ul class="license-features">
-                    <li>✓ All Standard features</li>
-                    <li>✓ Built-in web browser</li>
-                    <li>✓ Ad blocker</li>
-                    <li>✓ Torrent downloader</li>
-                    <li>✓ Advanced scheduler</li>
-                    <li>✓ Priority email support</li>
-                    <li>✓ Free updates</li>
-                </ul>
-                <a href="#" class="btn btn-primary" style="width: 100%;">Buy Now</a>
-            </div>
-            
-            <!-- Business License -->
-            <div class="license-card">
-                <h3>💼 Business</h3>
-                <div class="license-price">$99.99 <span>/ lifetime</span></div>
-                <ul class="license-features">
-                    <li>✓ All Premium features</li>
-                    <li>✓ Commercial use</li>
-                    <li>✓ Multi-device activation</li>
-                    <li>✓ Priority support</li>
-                    <li>✓ Custom licensing options</li>
-                    <li>✓ Source code access</li>
-                </ul>
-                <a href="#" class="btn btn-primary" style="width: 100%;">Contact Sales</a>
+
+        <!-- Special Offers Section -->
+        <div class="special-offer">
+            <span class="offer-badge">🔥 LIMITED TIME OFFERS</span>
+            <h3>🚀 Launch Special – First 100 Customers Only!</h3>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                <div style="flex: 1; min-width: 200px;">
+                    <strong style="font-size: 1.3rem; color: #856404;">📅 Quarterly</strong>
+                    <p style="font-size: 1.1rem;">3 months for <strong>$6.00</strong> <span style="text-decoration: line-through; color: #999;">$8.97</span></p>
+                    <p style="font-size: 0.9rem;">Save $2.97</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <strong style="font-size: 1.3rem; color: #856404;">📆 Tri-Annual</strong>
+                    <p style="font-size: 1.1rem;">3 years for <strong>$49.99</strong> <span style="text-decoration: line-through; color: #999;">$74.97</span></p>
+                    <p style="font-size: 0.9rem;">Save $24.98</p>
+                </div>
             </div>
         </div>
+        
+        <!-- Main License Cards - 3 Basic Plans -->
+        <div class="license-types" style="grid-template-columns: repeat(3, 1fr);">
+            
+            <!-- Monthly Plan (Basic) -->
+            <div class="license-card">
+                <h3>📅 Monthly</h3>
+                <div class="license-price">$2.99 <span>/ month</span></div>
+                <ul class="license-features">
+                    <li>✓ All program features</li>
+                    <li>✓ 1 device</li>
+                    <li>✓ Email support (48h response)</li>
+                    <li>✓ Updates during subscription</li>
+                    <li>✓ Download Manager</li>
+                    <li>✓ Built-in Browser</li>
+                    <li>✓ Torrent Downloader</li>
+                    <li>✓ YouTube Downloader</li>
+                    <li>✓ Smart Scheduler</li>
+                </ul>
+                <a href="#" class="btn btn-primary" style="width: 100%;">Choose Monthly</a>
+            </div>
+            
+            <!-- Yearly Plan (Most Popular) -->
+            <div class="license-card popular">
+                <div class="popular-badge">BEST VALUE</div>
+                <h3>📆 Yearly</h3>
+                <div class="license-price">$24.99 <span>/ year</span></div>
+                <ul class="license-features">
+                    <li>✓ All program features</li>
+                    <li>✓ 2 devices</li>
+                    <li>✓ Email support (24h response)</li>
+                    <li>✓ Updates during subscription</li>
+                    <li>✓ Download Manager</li>
+                    <li>✓ Built-in Browser</li>
+                    <li>✓ Torrent Downloader</li>
+                    <li>✓ YouTube Downloader</li>
+                    <li>✓ Smart Scheduler</li>
+                </ul>
+                <a href="#" class="btn btn-primary" style="width: 100%;">Choose Yearly</a>
+            </div>
+            
+            <!-- Lifetime Plan -->
+            <div class="license-card">
+                <h3>♾️ Lifetime</h3>
+                <div class="license-price">$74.99 <span>/ forever</span></div>
+                <ul class="license-features">
+                    <li>✓ All program features</li>
+                    <li>✓ 5 devices</li>
+                    <li>✓ Priority support + Live chat</li>
+                    <li>✓ Lifetime updates</li>
+                    <li>✓ Download Manager</li>
+                    <li>✓ Built-in Browser</li>
+                    <li>✓ Torrent Downloader</li>
+                    <li>✓ YouTube Downloader</li>
+                    <li>✓ Smart Scheduler</li>
+                </ul>
+                <a href="#" class="btn btn-primary" style="width: 100%;">Choose Lifetime</a>
+            </div>
+        </div>
+
+        <!-- Special Offers Explanation -->
+        <div class="comparison-note">
+            <h3 style="color: var(--secondary-color); margin-bottom: 0.5rem;">🎁 How the Special Offers Work</h3>
+            <p style="margin-bottom: 0.5rem;">Our special offers are simply discounted versions of the main plans:</p>
+            <ul style="margin-left: 1.5rem;">
+                <li><strong>Quarterly Offer</strong> – 3 months at $6.00 (instead of 3 × $2.99 = $8.97)</li>
+                <li><strong>Tri-Annual Offer</strong> – 3 years at $49.99 (instead of 3 × $24.99 = $74.97)</li>
+            </ul>
+            <p style="margin-top: 0.5rem;"><em>Note: These offers are for the same plans above, just with extra duration at a discounted price.</em></p>
+        </div>
+        
+        <!-- Feature Comparison Summary -->
+        <section style="margin-top: 3rem; background: var(--light-bg); padding: 2rem; border-radius: 8px;">
+            <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">📊 Plan Comparison</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: var(--primary-color); color: white;">
+                        <th style="padding: 12px;">Feature</th>
+                        <th style="padding: 12px;">Monthly</th>
+                        <th style="padding: 12px;">Yearly</th>
+                        <th style="padding: 12px;">Lifetime</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px;"><strong>Price</strong></td>
+                        <td style="padding: 10px;">$2.99/month</td>
+                        <td style="padding: 10px;">$24.99/year</td>
+                        <td style="padding: 10px;">$74.99 once</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px;"><strong>Devices</strong></td>
+                        <td style="padding: 10px;">1</td>
+                        <td style="padding: 10px;">2</td>
+                        <td style="padding: 10px;">5</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px;"><strong>Support</strong></td>
+                        <td style="padding: 10px;">Email (48h)</td>
+                        <td style="padding: 10px;">Email (24h)</td>
+                        <td style="padding: 10px;">Priority + Live Chat</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px;"><strong>Updates</strong></td>
+                        <td style="padding: 10px;">During subscription</td>
+                        <td style="padding: 10px;">During subscription</td>
+                        <td style="padding: 10px;">Lifetime</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>Special Offer</strong></td>
+                        <td style="padding: 10px;">3 months for $6.00</td>
+                        <td style="padding: 10px;">3 years for $49.99</td>
+                        <td style="padding: 10px;">—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         
         <!-- Activation Instructions -->
         <section style="margin-top: 4rem; background: var(--light-bg); padding: 2rem; border-radius: 8px;">
             <h2 style="color: var(--primary-color); margin-bottom: 1rem;">🔑 How to Activate</h2>
             <ol style="margin-left: 1.5rem; line-height: 2;">
                 <li>Download and install Fera Download Manager</li>
-                <li>Open the program and go to License menu</li>
+                <li>Open the program and go to License menu → Activate License</li>
                 <li>Copy your Machine ID shown in the activation window</li>
-                <li>Send the Machine ID to <a href="mailto:fera2007@gmail.com">fera2007@gmail.com</a> with your license type</li>
+                <li>Send the Machine ID to <a href="mailto:fera2007@gmail.com">fera2007@gmail.com</a> with your chosen plan</li>
                 <li>You will receive a license JSON file. Import it in the program</li>
             </ol>
         </section>
@@ -108,23 +229,30 @@
             
             <div style="margin-bottom: 1.5rem;">
                 <h3 style="color: var(--secondary-color);">What happens after the trial ends?</h3>
-                <p>After the 7-day trial, the program will continue to work with limited features until you activate a license. Your downloads and settings are preserved.</p>
+                <p>After 7 days, the program will continue with limited features until you activate a license. Your downloads and settings are preserved.</p>
             </div>
             
             <div style="margin-bottom: 1.5rem;">
-                <h3 style="color: var(--secondary-color);">Can I transfer my license to another computer?</h3>
-                <p>Licenses are machine-locked for security. If you need to transfer, please contact support for assistance.</p>
+                <h3 style="color: var(--secondary-color);">Can I upgrade from Monthly to Lifetime?</h3>
+                <p>Yes! You can upgrade at any time by paying the difference. Contact support for assistance.</p>
             </div>
             
             <div style="margin-bottom: 1.5rem;">
-                <h3 style="color: var(--secondary-color);">Do I get free updates?</h3>
-                <p>Yes, all licenses include free updates for the lifetime of the product.</p>
+                <h3 style="color: var(--secondary-color);">Do I get free updates with Lifetime plan?</h3>
+                <p>Absolutely! Lifetime plan includes all future updates forever, completely free.</p>
             </div>
             
             <div>
                 <h3 style="color: var(--secondary-color);">What payment methods do you accept?</h3>
-                <p>Currently we accept payments via PayPal and bank transfer. Contact us for more options.</p>
+                <p>We accept PayPal, credit/debit cards, and bank transfers. Contact us for more options.</p>
             </div>
+        </section>
+        
+        <!-- Contact for Business -->
+        <section style="margin-top: 3rem; text-align: center; padding: 2rem; background: linear-gradient(135deg, #f5f7fa, #e9ecef); border-radius: 8px;">
+            <h2 style="color: var(--primary-color);">💼 Need a custom plan?</h2>
+            <p>Contact us for enterprise licensing, volume discounts, or custom requirements.</p>
+            <a href="mailto:fera2007@gmail.com" class="btn btn-primary" style="margin-top: 1rem;">Contact Sales</a>
         </section>
     </main>
     
