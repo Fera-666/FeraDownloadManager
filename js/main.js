@@ -311,7 +311,7 @@ function initVideoTutorial() {
     videoBtn.addEventListener('click', () => {
         const lightbox = document.createElement('div');
         lightbox.className = 'video-lightbox';
-        lightbox.innerHTML = `<div class="video-lightbox-content"><button class="video-close">&times;</button><iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe></div>`;
+        lightbox.innerHTML = `<div class="video-lightbox-content"><button class="video-close">&times;</button><iframe width="100%" height="500" src="https://www.youtube.com/embed/rDq-VRzgW8U" frameborder="0" allowfullscreen></iframe></div>`;
         document.body.appendChild(lightbox);
         setTimeout(() => lightbox.classList.add('active'), 10);
         lightbox.querySelector('.video-close').addEventListener('click', () => {
