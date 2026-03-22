@@ -3,14 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download - Fera Download Manager</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Download - Fera Download Manager | Free Download for Windows</title>
+    
+    <meta name="description" content="Download Fera Download Manager for Windows free. Get the latest version with all features including YouTube downloader, torrent support, and built-in browser.">
+    <meta name="keywords" content="download fera, download manager download, free download manager windows, fera setup">
+    <meta name="author" content="Fera">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Download Fera Download Manager - Free for Windows">
+    <meta property="og:description" content="Get the latest version of Fera Download Manager. Fast, secure, and feature-rich download solution.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fera-666.github.io/FeraDownloadManager/download.html">
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .download-progress { display: none; margin-top: 1rem; text-align: center; }
+        .progress-bar { width: 100%; height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; }
+        .progress-fill { width: 0%; height: 100%; background: var(--accent-color); transition: width 0.3s ease; }
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        .download-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+        .download-card h3 { color: var(--primary-color); margin-bottom: 1rem; }
+        .download-card .size { font-size: 1.2rem; font-weight: bold; color: var(--accent-color); margin-bottom: 1rem; }
+        .download-card .requirements { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="images/logo.png" alt="Fera Logo" style="width: 80px; height: 80px; margin-bottom: 1rem;">
             <h1>📥 Download</h1>
             <p>Get the latest version of Fera Download Manager</p>
         </div>
@@ -32,17 +67,14 @@
     </nav>
     
     <main class="container">
-        <!-- Latest Version Info -->
         <section style="text-align: center; margin-bottom: 3rem;">
             <h2 style="color: var(--primary-color);">Latest Version: <span class="latest-version">v1.0.0</span></h2>
             <p class="release-date" style="font-size: 1.2rem;">Released: March 2026</p>
         </section>
         
-        <!-- Download Cards -->
-        <div class="download-options" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-            <!-- Full Installer -->
+        <div class="download-options">
             <div class="download-card">
-                <img src="images/icons/download-icon.png" alt="Installer" style="width: 64px; height: 64px;">
+                <img src="images/icons/download-icon.png" alt="Installer" style="width: 64px; height: 64px;" data-src="images/icons/download-icon.png">
                 <h3>📦 Full Installer</h3>
                 <div class="size">48 MB</div>
                 <p class="requirements">Windows 10/11 (64-bit)</p>
@@ -50,53 +82,38 @@
                     <li>Complete program with all features</li>
                     <li>Includes yt-dlp, ffmpeg, aria2c</li>
                     <li>Desktop shortcut & file associations</li>
+                    <li>7-day free trial included</li>
                 </ul>
-                <a href="https://github.com/Fera-666/FeraUpdates/releases/latest/download/FDM_Setup_v1.0.0.exe" class="btn btn-primary" style="width: 100%;">Download Installer</a>
+                <a href="https://github.com/Fera-666/FeraUpdates/releases/download/v1.0.0/FDM.Installer.exe" class="btn btn-primary download-installer" style="width: 100%;">Download Installer (v1.0.0)</a>
+                <div class="download-progress" id="progress-installer">
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem;">Downloading...</p>
+                </div>
             </div>
             
-            <!-- Update Package -->
             <div class="download-card">
-                <img src="images/icons/update-icon.png" alt="Update" style="width: 64px; height: 64px;">
+                <img src="images/icons/update-icon.png" alt="Update" style="width: 64px; height: 64px;" data-src="images/icons/update-icon.png">
                 <h3>🔄 Update Package</h3>
                 <div class="size">532 KB</div>
                 <p class="requirements">For existing installations</p>
                 <ul style="text-align: left; margin: 1rem 0; padding-left: 1.5rem;">
-                    <li>Updates v1.0.0 to v1.1.0</li>
+                    <li>Updates to latest version</li>
                     <li>Auto-update via program</li>
                     <li>Preserves all settings</li>
+                    <li>Manual update option</li>
                 </ul>
-                <a href="https://github.com/Fera-666/FeraUpdates/releases/latest/download/Fera_Update_1.1.0.zip" class="btn btn-secondary" style="width: 100%;">Download Update</a>
+                <a href="https://github.com/Fera-666/FeraUpdates/releases/download/v1.1.0/Fera_Update_1.1.0.zip" class="btn btn-secondary" style="width: 100%;">Download Update</a>
             </div>
         </div>
         
-        <!-- System Requirements -->
         <section class="system-reqs">
             <h3>⚙️ System Requirements</h3>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                <div>
-                    <h4 style="color: var(--secondary-color);">Minimum</h4>
-                    <ul>
-                        <li>OS: Windows 10 (64-bit)</li>
-                        <li>Processor: 1 GHz or faster</li>
-                        <li>RAM: 2 GB</li>
-                        <li>Storage: 100 MB free space</li>
-                        <li>Internet connection</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="color: var(--secondary-color);">Recommended</h4>
-                    <ul>
-                        <li>OS: Windows 11 (64-bit)</li>
-                        <li>Processor: 2 GHz dual-core</li>
-                        <li>RAM: 4 GB</li>
-                        <li>Storage: 500 MB free space</li>
-                        <li>Broadband internet</li>
-                    </ul>
-                </div>
+                <div><h4 style="color: var(--secondary-color);">Minimum</h4><ul><li>OS: Windows 10 (64-bit)</li><li>Processor: 1 GHz or faster</li><li>RAM: 2 GB</li><li>Storage: 100 MB free space</li><li>Internet connection</li></ul></div>
+                <div><h4 style="color: var(--secondary-color);">Recommended</h4><ul><li>OS: Windows 11 (64-bit)</li><li>Processor: 2 GHz dual-core</li><li>RAM: 4 GB</li><li>Storage: 500 MB free space</li><li>Broadband internet</li></ul></div>
             </div>
         </section>
         
-        <!-- External Tools -->
         <section style="margin-top: 3rem; background: var(--light-bg); padding: 2rem; border-radius: 8px;">
             <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🔧 Included Tools</h3>
             <p>All external tools are included in the installer:</p>
@@ -107,65 +124,67 @@
             </ul>
         </section>
         
-        <!-- Download Instructions -->
         <section style="margin-top: 3rem;">
             <h3 style="color: var(--primary-color); margin-bottom: 1rem;">📋 How to Install</h3>
             <ol style="margin-left: 1.5rem; line-height: 2;">
-                <li>Download the installer (FDM_Setup_v1.0.0.exe)</li>
+                <li>Download the installer (FDM Installer v1.0.0.exe)</li>
                 <li>Run the installer and follow the instructions</li>
-                <li>Launch Fera Download Manager from desktop shortcut</li>
+                <li>Choose installation directory (default: C:\Program Files\Fera Download Manager)</li>
+                <li>Select additional tasks (desktop shortcut, file associations)</li>
+                <li>Launch Fera Download Manager from desktop shortcut or Start Menu</li>
                 <li>Enjoy 7-day free trial or activate your license</li>
             </ol>
         </section>
         
-        <!-- Version History Note -->
         <section style="margin-top: 2rem; text-align: center; color: #666;">
             <p>📌 See full changelog on the <a href="changelog.html">Changelog page</a></p>
+            <p>🔗 Alternative downloads available on <a href="https://github.com/Fera-666/FeraUpdates/releases" target="_blank">GitHub Releases</a></p>
+        </section>
+        
+        <section style="margin-top: 2rem; text-align: center; padding: 1rem; background: var(--light-bg); border-radius: 8px;">
+            <p>⭐ Trusted by <strong>10,000+</strong> users worldwide | ⚡ Average download speed: <strong>15 MB/s</strong></p>
         </section>
     </main>
     
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Fera Download Manager</h4>
-                    <p>The all-in-one download solution for Windows. Created with ❤️ by Fera.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="download.html">Download</a></li>
-                        <li><a href="changelog.html">Changelog</a></li>
-                        <li><a href="license.html">License</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="support.html">Contact</a></li>
-                        <li><a href="https://github.com/Fera-666/FeraUpdates/issues" target="_blank">GitHub Issues</a></li>
-                        <li><a href="mailto:fera2007@gmail.com">Email</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Follow</h4>
-                    <ul>
-                        <li><a href="https://github.com/Fera-666" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
+                <div class="footer-section"><h4>Fera Download Manager</h4><p>The all-in-one download solution for Windows. Created with ❤️ by Fera.</p></div>
+                <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="features.html">Features</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="license.html">License</a></li></ul></div>
+                <div class="footer-section"><h4>Support</h4><ul><li><a href="support.html">Contact</a></li><li><a href="https://github.com/Fera-666/FeraUpdates/issues" target="_blank">GitHub Issues</a></li><li><a href="mailto:fera2007@gmail.com">Email</a></li></ul></div>
+                <div class="footer-section"><h4>Follow</h4><ul><li><a href="https://github.com/Fera-666" target="_blank">GitHub</a></li></ul></div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>© 2026 Fera. All rights reserved. | Version <span class="latest-version">1.0.0</span></p>
-            </div>
+            <div class="footer-bottom"><p>© 2026 Fera. All rights reserved. | Version <span class="latest-version">1.0.0</span></p></div>
         </div>
     </footer>
     
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.querySelectorAll('.download-installer').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (typeof trackEvent !== 'undefined') trackEvent('Download', 'Click', this.textContent.trim());
+                e.preventDefault();
+                const progressDiv = document.getElementById('progress-installer');
+                const fill = progressDiv.querySelector('.progress-fill');
+                const downloadUrl = this.href;
+                progressDiv.style.display = 'block';
+                let width = 0;
+                const interval = setInterval(() => {
+                    if (width >= 100) { 
+                        clearInterval(interval); 
+                        window.location.href = downloadUrl; 
+                        setTimeout(() => { 
+                            progressDiv.style.display = 'none'; 
+                            fill.style.width = '0%'; 
+                        }, 2000);
+                    } else { 
+                        width += Math.random() * 15; 
+                        fill.style.width = Math.min(width, 100) + '%'; 
+                    }
+                }, 200);
+            });
+        });
+    </script>
 </body>
 </html>

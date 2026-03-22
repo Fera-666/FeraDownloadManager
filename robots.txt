@@ -1,0 +1,13 @@
+# Robots.txt for Fera Download Manager
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://fera-666.github.io/FeraDownloadManager/sitemap.xml
+
+# Crawl delay (be nice to the server)
+Crawl-delay: 5
+
+# Disable crawling of unnecessary directories
+Disallow: /fonts/
+Disallow: /backup/

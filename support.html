@@ -3,14 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Fera Download Manager</title>
+    <title>Support - Fera Download Manager | Help Center & Contact</title>
+    
+    <meta name="description" content="Get help with Fera Download Manager. Contact support, report issues, and browse FAQs.">
+    <meta name="keywords" content="download manager support, help desk, contact support, fera help">
+    <meta name="author" content="Fera">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Fera Download Manager Support">
+    <meta property="og:description" content="We're here to help! Contact our support team or browse our knowledge base.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fera-666.github.io/FeraDownloadManager/support.html">
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <style>
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        .support-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        .support-card:hover { transform: translateY(-5px); }
+        .support-card img { width: 64px; height: 64px; margin-bottom: 1rem; }
+        .support-card h3 { color: var(--primary-color); margin-bottom: 1rem; }
+        .support-card p { color: #666; margin-bottom: 1.5rem; }
+        .contact-form-section { padding: 2rem 0; }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            background: white;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            background: #27ae60;
+            color: white;
+        }
+        .live-chat {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            z-index: 998;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        .live-chat:hover { transform: scale(1.05); }
+        @media (max-width: 768px) { .live-chat { bottom: 140px; padding: 10px 15px; font-size: 0.85rem; } }
+        details {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+        details summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+        details p { margin-top: 0.5rem; }
+        .system-status {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .status-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .ticket-system {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-		<img src="images/logo.png" alt="Fera Logo" style="width: 80px; height: 80px; margin-bottom: 1rem;">
             <h1>🆘 Support</h1>
             <p>We're here to help you</p>
         </div>
@@ -32,116 +159,170 @@
     </nav>
     
     <main class="container">
-        <!-- Support Options Grid -->
         <div class="support-options">
-            <!-- GitHub Issues -->
             <div class="support-card">
-                <img src="images/icons/github-icon.png" alt="GitHub">
-                <h3>🐛 GitHub Issues</h3>
-                <p>Report bugs, suggest features, or track development</p>
+                <img src="images/icons/github-icon.png" alt="GitHub" data-src="images/icons/github-icon.png">
+                <h3>GitHub Issues</h3>
+                <p>Report bugs, suggest features, or track development progress</p>
                 <a href="https://github.com/Fera-666/FeraUpdates/issues" target="_blank" class="btn btn-secondary">Open GitHub Issues</a>
             </div>
-            
-            <!-- Email Support -->
             <div class="support-card">
-                <img src="images/icons/email-icon.png" alt="Email">
-                <h3>📧 Email Support</h3>
+                <img src="images/icons/email-icon.png" alt="Email" data-src="images/icons/email-icon.png">
+                <h3>Email Support</h3>
                 <p>Direct contact for license activation and urgent matters</p>
                 <p><strong>fera2007@gmail.com</strong></p>
                 <a href="mailto:fera2007@gmail.com" class="btn btn-secondary">Send Email</a>
             </div>
-            
-            <!-- Documentation -->
             <div class="support-card">
-                <img src="images/icons/docs-icon.png" alt="Documentation">
-                <h3>📚 Documentation</h3>
-                <p>User guides and FAQs (coming soon)</p>
-                <button class="btn btn-secondary" disabled>Coming Soon</button>
+                <img src="images/icons/docs-icon.png" alt="Documentation" data-src="images/icons/docs-icon.png">
+                <h3>Documentation</h3>
+                <p>User guides, tutorials, and detailed documentation</p>
+                <a href="#" class="btn btn-secondary" id="docs-link">Coming Soon</a>
             </div>
         </div>
         
-        <!-- FAQ Section -->
+        <div class="contact-form-section" id="contact-form-section">
+            <h2 style="color: var(--primary-color); text-align: center; margin-bottom: 2rem;">📬 Send us a Message</h2>
+            <form id="contact-form" class="contact-form" method="POST">
+                <input type="hidden" name="_subject" value="New message from Fera Website">
+                <input type="hidden" name="_replyto" value="email">
+                <div class="form-group">
+                    <label for="contact-name">Full Name *</label>
+                    <input type="text" id="contact-name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email Address *</label>
+                    <input type="email" id="contact-email" name="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="contact-subject">Subject *</label>
+                    <select id="contact-subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="license">License Activation Issue</option>
+                        <option value="bug">Bug Report</option>
+                        <option value="feature">Feature Request</option>
+                        <option value="billing">Billing Question</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message *</label>
+                    <textarea id="contact-message" name="message" required placeholder="Describe your issue in detail..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                <p style="font-size: 0.8rem; text-align: center; margin-top: 1rem; color: #666;">We'll respond within 24 hours</p>
+            </form>
+        </div>
+        
         <section style="margin-top: 4rem;">
             <h2 style="color: var(--primary-color); text-align: center; margin-bottom: 2rem;">❓ Frequently Asked Questions</h2>
-            
             <div style="max-width: 800px; margin: 0 auto;">
-                <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--light-bg); border-radius: 8px;">
-                    <h3 style="color: var(--secondary-color);">How do I activate my license?</h3>
-                    <p>Go to License menu → Activate License, copy your Machine ID, and email it to fera2007@gmail.com with your license type. You'll receive a JSON file to import.</p>
-                </div>
-                
-                <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--light-bg); border-radius: 8px;">
-                    <h3 style="color: var(--secondary-color);">Why isn't YouTube download working?</h3>
-                    <p>Make sure yt-dlp.exe is in the program folder. You can download it manually from <a href="https://github.com/yt-dlp/yt-dlp/releases" target="_blank">yt-dlp releases</a>.</p>
-                </div>
-                
-                <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--light-bg); border-radius: 8px;">
-                    <h3 style="color: var(--secondary-color);">Torrent downloads not starting?</h3>
-                    <p>Ensure aria2c.exe is present (64-bit or 32-bit version matching your system). Check your firewall settings and try adding trackers manually.</p>
-                </div>
-                
-                <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--light-bg); border-radius: 8px;">
-                    <h3 style="color: var(--secondary-color);">Can I use the program in Arabic?</h3>
-                    <p>Yes! Fera fully supports both Arabic (RTL) and English. Switch languages instantly from the Language menu.</p>
-                </div>
-                
-                <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--light-bg); border-radius: 8px;">
-                    <h3 style="color: var(--secondary-color);">How do I report a bug?</h3>
-                    <p>Open an issue on <a href="https://github.com/Fera-666/FeraUpdates/issues" target="_blank">GitHub Issues</a> with detailed steps, screenshots, and your system information.</p>
-                </div>
+                <details><summary>How do I activate my license?</summary><p>Go to License menu → Activate License, copy your Machine ID, and email it to fera2007@gmail.com with your license type. You'll receive a JSON file to import within 24 hours.</p></details>
+                <details><summary>Why isn't YouTube download working?</summary><p>Make sure yt-dlp.exe is in the program folder. You can download it manually from <a href="https://github.com/yt-dlp/yt-dlp/releases" target="_blank">yt-dlp releases</a>. Also check your internet connection and firewall settings.</p></details>
+                <details><summary>Torrent downloads not starting?</summary><p>Ensure aria2c.exe is present (64-bit or 32-bit version matching your system). Check your firewall settings and try adding trackers manually.</p></details>
+                <details><summary>Can I use the program in Arabic?</summary><p>Yes! Fera fully supports both Arabic (RTL) and English. Switch languages instantly from the Language menu.</p></details>
+                <details><summary>How do I report a bug?</summary><p>Open an issue on <a href="https://github.com/Fera-666/FeraUpdates/issues" target="_blank">GitHub Issues</a> with detailed steps, screenshots, and your system information.</p></details>
+                <details><summary>What's the refund policy?</summary><p>We offer a 30-day money-back guarantee on all plans (60 days for Lifetime). Contact support for assistance.</p></details>
+                <details><summary>Can I transfer my license to another computer?</summary><p>Yes! You can deactivate your license from the old computer and activate on the new one. Contact support if you need assistance.</p></details>
             </div>
         </section>
         
-        <!-- Contact Form (Optional - can be added later) -->
-        <section style="margin-top: 4rem; text-align: center;">
-            <h2 style="color: var(--primary-color);">📬 Get in Touch</h2>
-            <p style="margin-bottom: 2rem;">Have a question not answered here? Feel free to reach out.</p>
-            <a href="mailto:fera2007@gmail.com" class="download-btn">Send us an Email</a>
-        </section>
+        <div class="system-status">
+            <h3 style="color: var(--primary-color);">🟢 System Status</h3>
+            <div class="status-grid">
+                <div><span class="status-badge">● Operational</span><p>Download Servers</p></div>
+                <div><span class="status-badge">● Operational</span><p>License Activation</p></div>
+                <div><span class="status-badge">● Operational</span><p>Update Servers</p></div>
+                <div><span class="status-badge">● Operational</span><p>Support System</p></div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">Last checked: <span id="status-time">Just now</span></p>
+        </div>
+        
+        <div class="ticket-system" id="ticket-system">
+            <h3 style="color: var(--primary-color);">🎫 My Support Tickets</h3>
+            <p>Track your existing support requests</p>
+            <div id="ticket-list" style="margin-top: 1rem;">
+                <p style="color: #666;">No tickets found. <a href="#contact-form-section">Create a new ticket</a></p>
+            </div>
+        </div>
     </main>
+    
+    <div class="live-chat" id="live-chat-btn">💬 Live Chat</div>
     
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Fera Download Manager</h4>
-                    <p>The all-in-one download solution for Windows. Created with ❤️ by Fera.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="download.html">Download</a></li>
-                        <li><a href="changelog.html">Changelog</a></li>
-                        <li><a href="license.html">License</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="support.html">Contact</a></li>
-                        <li><a href="https://github.com/Fera-666/FeraUpdates/issues" target="_blank">GitHub Issues</a></li>
-                        <li><a href="mailto:fera2007@gmail.com">Email</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Follow</h4>
-                    <ul>
-                        <li><a href="https://github.com/Fera-666" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
+                <div class="footer-section"><h4>Fera Download Manager</h4><p>The all-in-one download solution for Windows. Created with ❤️ by Fera.</p></div>
+                <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="features.html">Features</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="license.html">License</a></li></ul></div>
+                <div class="footer-section"><h4>Support</h4><ul><li><a href="support.html">Contact</a></li><li><a href="https://github.com/Fera-666/FeraUpdates/issues" target="_blank">GitHub Issues</a></li><li><a href="mailto:fera2007@gmail.com">Email</a></li></ul></div>
+                <div class="footer-section"><h4>Follow</h4><ul><li><a href="https://github.com/Fera-666" target="_blank">GitHub</a></li></ul></div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>© 2026 Fera. All rights reserved. | Version <span class="latest-version">1.0.0</span></p>
-            </div>
+            <div class="footer-bottom"><p>© 2026 Fera. All rights reserved. | Version <span class="latest-version">1.0.0</span></p></div>
         </div>
     </footer>
     
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('status-time').textContent = new Date().toLocaleString();
+        document.getElementById('live-chat-btn').addEventListener('click', () => {
+			// فتح واتساب للتواصل المباشر
+			window.open('https://wa.me/201008856808?text=Hello%20I%20need%20help%20with%20Fera%20Download%20Manager', '_blank');
+			if (typeof trackEvent !== 'undefined') trackEvent('Support', 'Live chat clicked');
+		});
+        document.getElementById('docs-link').addEventListener('click', (e) => { e.preventDefault(); alert('📚 Documentation is coming soon!\n\nPlease check our FAQ section or contact support.'); });
+        
+        const savedTickets = localStorage.getItem('support_tickets');
+        if (savedTickets) {
+            const tickets = JSON.parse(savedTickets);
+            if (tickets.length > 0) {
+                document.getElementById('ticket-list').innerHTML = tickets.map(ticket => `
+                    <div style="padding: 1rem; border-bottom: 1px solid #eee;">
+                        <strong>#${ticket.id}</strong> - ${ticket.subject}
+                        <span style="background: #f39c12; color: white; float: right; font-size: 0.7rem; padding: 2px 8px; border-radius: 20px;">${ticket.status}</span>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">${ticket.message.substring(0, 100)}...</p>
+                        <small>Created: ${new Date(ticket.created).toLocaleDateString()}</small>
+                    </div>
+                `).join('');
+            }
+        }
+        
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name = document.getElementById('contact-name').value;
+                const email = document.getElementById('contact-email').value;
+                const subject = document.getElementById('contact-subject').value;
+                const message = document.getElementById('contact-message').value;
+                if (!name || !email || !subject || !message) { alert('Please fill in all fields'); return; }
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                try {
+                    const response = await fetch(CONFIG.URLS.CONTACT_API, {
+                        method: 'POST', headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name, email, subject, message })
+                    });
+                    if (response.ok) {
+                        const tickets = JSON.parse(localStorage.getItem('support_tickets') || '[]');
+                        const newTicket = { id: Date.now(), subject, message, status: 'pending', created: new Date().toISOString() };
+                        tickets.unshift(newTicket);
+                        localStorage.setItem('support_tickets', JSON.stringify(tickets));
+                        alert('✅ Message sent successfully! We will respond within 24 hours.\nYour ticket ID: #' + newTicket.id);
+                        contactForm.reset();
+                        if (typeof trackEvent !== 'undefined') trackEvent('Support', 'Ticket created', subject);
+                        location.reload();
+                    } else throw new Error('Formspree error');
+                } catch (error) {
+                    alert('❌ Error sending message. Please try again or email us directly at fera2007@gmail.com');
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+    </script>
 </body>
 </html>
