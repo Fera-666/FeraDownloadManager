@@ -21,6 +21,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
     <style>
         .rss-feed { text-align: right; margin-bottom: 1rem; }
         .rss-feed a { background: #ff6600; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; }
@@ -64,16 +67,18 @@
         </div>
         
         <section style="margin-top: 3rem; padding: 2rem; background: var(--light-bg); border-radius: var(--border-radius); text-align: center;">
-		<h3 style="color: var(--primary-color);">📧 Get Update Notifications</h3>
-		<p>Subscribe to receive email notifications about new releases and important updates.</p>
-		<form action="https://formspree.io/f/xdawvlna" method="POST" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem;">
-			<input type="email" name="email" placeholder="Your email address" required style="padding: 12px 20px; border-radius: 50px; border: 2px solid #ddd; min-width: 250px;">
-			<input type="hidden" name="_subject" value="New newsletter subscriber from Fera Website">
-			<input type="hidden" name="_replyto" value="email">
-			<button type="submit" class="btn btn-primary">Subscribe</button>
-		</form>
-		<p style="font-size: 0.85rem; margin-top: 1rem; color: #666;">We respect your privacy. Unsubscribe at any time.</p>
-		</section>
+            <h3 style="color: var(--primary-color);">📧 Get Update Notifications</h3>
+            <p>Subscribe to receive email notifications about new releases and important updates.</p>
+            <form id="subscribe-form" action="https://formspree.io/f/xdawvlna" method="POST" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: 1rem;">
+                <input type="email" name="email" placeholder="Your email address" required style="padding: 12px 20px; border-radius: 50px; border: 2px solid #ddd; min-width: 250px;">
+                <input type="hidden" name="_subject" value="New newsletter subscriber from Fera Website">
+                <input type="hidden" name="_replyto" value="email">
+                <!-- reCAPTCHA Widget -->
+                <div class="g-recaptcha" data-sitekey="6LcD4ZIsAAAAAHx-ydIWnl1BYWixk2iC3xLvHJ2_"></div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <p style="font-size: 0.85rem; margin-top: 1rem; color: #666;">We respect your privacy. Unsubscribe at any time.</p>
+        </section>
         
         <section style="margin-top: 2rem;">
             <h2 style="color: var(--primary-color);">📊 Version History Summary</h2>
