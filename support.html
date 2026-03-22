@@ -21,6 +21,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
     <style>
         .support-options {
             display: grid;
@@ -208,6 +211,10 @@
                 <div class="form-group">
                     <label for="contact-message">Message *</label>
                     <textarea id="contact-message" name="message" required placeholder="Describe your issue in detail..."></textarea>
+                </div>
+                <!-- reCAPTCHA Widget -->
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="6LcD4ZIsAAAAAHx-ydIWnl1BYWixk2iC3xLvHJ2_"></div>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                 <p style="font-size: 0.8rem; text-align: center; margin-top: 1rem; color: #666;">We'll respond within 24 hours</p>
